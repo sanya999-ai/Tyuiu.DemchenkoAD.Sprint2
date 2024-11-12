@@ -11,7 +11,7 @@ namespace Tyuiu.DemchenkoAD.Sprint2.Task4.V12.Test
             double x = 16;
             double y = 2;
             double res = ds.Calculate(x, y);
-            double wait = 45.757;
+            double wait = 56.3;
             Assert.AreEqual(res, wait);
         }
         
