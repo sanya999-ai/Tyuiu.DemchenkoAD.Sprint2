@@ -89,7 +89,6 @@ namespace Tyuiu.DemchenkoAD.Sprint2.Task5.V9.Lib
                 string res2;
                 res2 = m + "." + res;
                 return res2;
-
             }
         }
     }

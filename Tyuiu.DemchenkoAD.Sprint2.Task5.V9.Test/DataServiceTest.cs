@@ -8,12 +8,11 @@ namespace Tyuiu.DemchenkoAD.Sprint2.Task5.V9.Test
         public void TestMethod1()
         {
             DataService ds = new DataService();
-            int n = 08;
-            int m = 09;
-            string wait = "10.08";
+            int n = 06;
+            int m = 28;
+            string wait = "29.06";
             var res = ds.FindDateOfNextDay(m, n);
             Assert.AreEqual(wait, res);
-
         }
     }
 }

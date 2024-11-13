@@ -23,10 +23,10 @@ namespace Tyuiu.DemchenkoAD.Sprint2.Task5.V9
             Console.WriteLine("***************************************************************************");
             Console.WriteLine("* ИСХОДНЫЕ ДАННЫЕ:                                                        *");
             Console.WriteLine("***************************************************************************");
-            Console.WriteLine("Введите порядковый номер месяца");
+            Console.WriteLine("Введите порядковый номер месяца: ");
 
             int n = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("Введите число");
+            Console.WriteLine("Введите число: ");
             int m = Convert.ToInt32(Console.ReadLine());
             if ((n > 12) || (m > 31))
             {
@@ -56,9 +56,9 @@ namespace Tyuiu.DemchenkoAD.Sprint2.Task5.V9
                 }
                 else
                 {
-                    Console.WriteLine("***************************************************************************");
-                    Console.WriteLine("* РЕЗУЛЬТАТ:                                                              *");
-                    Console.WriteLine("***************************************************************************");
+                    Console.WriteLine("********************************************************************************************");
+                    Console.WriteLine("* РЕЗУЛЬТАТ:                                                                               *");
+                    Console.WriteLine("********************************************************************************************");
                     Console.WriteLine("На следующий день будет " + ds.FindDateOfNextDay(m, n));
 
                 }
