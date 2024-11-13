@@ -19,47 +19,19 @@ namespace Tyuiu.DemchenkoAD.Sprint2.Task5.V9
             Console.WriteLine("* вычисляет, и печатает результат на экране                               *");
             Console.WriteLine("*                                                                         *");
             Console.WriteLine("***************************************************************************");
+            Console.WriteLine("Введите число:");
             
+            int day = int.Parse(Console.ReadLine());
 
-            int x = 3;
+            Console.WriteLine("Введите номер месяца (от 1 до 12):");
+            int month = int.Parse(Console.ReadLine());
 
-            int y = 0;
+            DataService dataService = new DataService();
+            string nextDate = dataService.FindDateOfNextDay(day, month);
 
-            switch (x)
+            Console.WriteLine($"Следующая дата: {nextDate}");
 
-            {
 
-                case -3:
-
-                case -2:
-
-                case -1: y = -x; break;
-
-                case 0: y = 5; break;
-
-                case 3:
-
-                case 2:
-
-                case 1: y = 2 * x; break;
-
-            }
-            Console.WriteLine(y);
-            DataService ds = new DataService();
-            Console.WriteLine("************************************************************************");
-            Console.WriteLine("* ИСХОДНЫЕ ДАННЫЕ:                                                     *");
-            Console.WriteLine("************************************************************************");
-
-            Console.WriteLine("Введите переменную m:");
-            int m = int.Parse(Console.ReadLine()!);
-            Console.WriteLine("Введите переменную n:");
-            int n = int.Parse(Console.ReadLine()!);
-
-            Console.WriteLine("************************************************************************");
-            Console.WriteLine("* РЕЗУЛЬТАТ:                                                           *");
-            Console.WriteLine("************************************************************************");
-
-            Console.WriteLine(ds.FindDateOfNextDay(m, n));
         }
     }
 }

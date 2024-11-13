@@ -5,34 +5,62 @@ namespace Tyuiu.DemchenkoAD.Sprint2.Task5.V9.Lib
     {
         public string FindDateOfNextDay(int m, int n)
         {
-            switch (n)
+            int nextDay = n;
+            int nextMonth = m;
+
+            switch (m)
             {
-                case 1:
-                    return m == 31 ? "1.02" : $"{m + 1}.01";
-                case 2:
-                    return m == 28 ? "1.03" : $"{m + 1}.02";
-                case 3:
-                    return m == 31 ? "1.04" : $"{m + 1}.03";
-                case 4:
-                    return m == 30 ? "1.05" : $"{m + 1}.04";
-                case 5:
-                    return m == 31 ? "1.06" : $"{m + 1}.05";
-                case 6:
-                    return m == 30 ? "1.07" : $"{m + 1}.06";
-                case 7:
-                    return m == 31 ? "1.08" : $"{m + 1}.07";
-                case 8:
-                    return m == 31 ? "1.09" : $"{m + 1}.08";
-                case 9:
-                    return m == 30 ? "1.10" : $"{m + 1}.09";
-                case 10:
-                    return m == 31 ? "1.11" : $"{m + 1}.10";
-                case 11:
-                    return m == 30 ? "1.12" : $"{m + 1}.11";
-                case 12:
-                    return $"{m + 1}.12";
+                case 1: // Январь
+                case 3: // Март
+                case 5: // Май
+                case 7: // Июль
+                case 8: // Август
+                case 10: // Октябрь
+                case 12: // Декабрь
+                    if (n == 31)
+                    {
+                        nextDay = 1;
+                        nextMonth = (m == 12) ? 1 : m + 1;
+                    }
+                    else
+                    {
+                        nextDay++;
+                    }
+                    break;
+
+                case 4: // Апрель
+                case 6: // Июнь
+                case 9: // Сентябрь
+                case 11: // Ноябрь
+                    if (n == 30)
+                    {
+                        nextDay = 1;
+                        nextMonth = m + 1;
+                    }
+                    else
+                    {
+                        nextDay++;
+                    }
+                    break;
+
+                case 2: // Февраль
+                    if (n == 28)
+                    {
+                        nextDay = 1;
+                        nextMonth = 3; // Март
+                    }
+                    else
+                    {
+                        nextDay++;
+                    }
+                    break;
+
+                default:
+                    throw new ArgumentException("Некорректный номер месяца.");
             }
-            return "";
+
+
+            return $"{nextDay:D2}.{nextMonth:D2}";
         }
     }
 }
