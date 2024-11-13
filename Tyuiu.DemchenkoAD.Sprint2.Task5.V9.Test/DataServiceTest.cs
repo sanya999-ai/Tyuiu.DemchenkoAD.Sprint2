@@ -8,7 +8,7 @@ namespace Tyuiu.DemchenkoAD.Sprint2.Task5.V9.Test
         public void TestMethod1()
         {
             DataService ds = new DataService();
-            Assert.AreEqual("1.01", ds.FindDateOfNextDay(1, 1));
+            Assert.AreEqual("1.12", ds.FindDateOfNextDay(30, 11));
         }
     }
 }
