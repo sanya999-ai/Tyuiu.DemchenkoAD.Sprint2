@@ -18,23 +18,21 @@ namespace Tyuiu.DemchenkoAD.Sprint2.Task4.V12
             Console.WriteLine("* Сделать всё как на фотке из моего варианта                              *");
             Console.WriteLine("***************************************************************************");
             Console.WriteLine("* ИСХОДНЫЕ ДАННЫЕ:                                                        *");
-            Console.WriteLine("***************************************************************************");  
+            Console.WriteLine("***************************************************************************");
 
-            Console.WriteLine("Введите значение переменной X: ");
-            double x = Convert.ToDouble(Console.ReadLine());
-
-            Console.WriteLine("Введите значение переменной Y: ");
-            double y = Convert.ToDouble(Console.ReadLine());
-
-            double res = ds.Calculate(x, y);
-
+            double x, y;
+            Console.WriteLine("Введите значение X: ");
+            x = Convert.ToDouble(Console.ReadLine());
+            Console.WriteLine("Введите значение Y: ");
+            y = Convert.ToDouble(Console.ReadLine());
 
 
             Console.WriteLine("***************************************************************************");
             Console.WriteLine("* РЕЗУЛЬТАТ:                                                              *");
             Console.WriteLine("***************************************************************************");
 
-            Console.WriteLine("Ваш ответ  = " + res);
+            Console.WriteLine(ds.Calculate(x, y));
+            Console.ReadKey();
 
 
             Console.ReadKey();
