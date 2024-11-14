@@ -21,17 +21,13 @@ namespace Tyuiu.DemchenkoAD.Sprint2.Task4.V12
             Console.WriteLine("***************************************************************************");
 
             double x, y;
-            Console.WriteLine("Введите значение X: ");
+            Console.WriteLine("Введите x : ");
             x = Convert.ToDouble(Console.ReadLine());
-            Console.WriteLine("Введите значение Y: ");
+            Console.WriteLine("Введите y : ");
             y = Convert.ToDouble(Console.ReadLine());
-
-
-            Console.WriteLine("***************************************************************************");
-            Console.WriteLine("* РЕЗУЛЬТАТ:                                                              *");
-            Console.WriteLine("***************************************************************************");
-
-            Console.WriteLine(ds.Calculate(x, y));
+            Console.WriteLine("* Результат:                                                                  *");
+            Console.WriteLine("*******************************************************************************");
+            Console.WriteLine($"Ответ : {ds.Calculate(x, y)}");
             Console.ReadKey();
 
 

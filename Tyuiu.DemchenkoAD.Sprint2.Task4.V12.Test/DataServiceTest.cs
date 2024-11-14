@@ -8,10 +8,10 @@ namespace Tyuiu.DemchenkoAD.Sprint2.Task4.V12.Test
         public void TestMethod1()
         {
             DataService ds = new DataService();
-            double x, y;
-            x = 2;
-            y = 0.5;
-            Assert.AreEqual(225, ds.Calculate(x, y));
+            double x = 1;
+            double y = 2;
+            double res = ds.Calculate(x, y);
+            Assert.AreEqual(0.839, res);
         }
     }
 }
